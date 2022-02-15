@@ -1,0 +1,17 @@
+input,
+textarea {
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px auto;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.newsletter {
+    align-self: center;
+    width: 50%;
+}
+
+.btn {
+    font-weight: bold;
+}

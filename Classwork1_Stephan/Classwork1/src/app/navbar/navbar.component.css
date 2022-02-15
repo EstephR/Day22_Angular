@@ -1,0 +1,10 @@
+.navbar {
+    background: black !important;
+}
+
+.donateButton {
+    background: none;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+}

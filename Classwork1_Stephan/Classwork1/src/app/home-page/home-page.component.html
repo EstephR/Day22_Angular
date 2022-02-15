@@ -1,0 +1,12 @@
+<h1 class="h1 text-center m-4">Our Cars</h1>
+
+<div class="row justify-content-center gap-3">
+    <div class="card border-0" style="width: 18rem;" *ngFor="let car of cars">
+        <img src="{{car.img}}" class="card-img-top" height="200" style="object-fit:cover; object-position:center" alt="">
+        <div class="card-body border">
+            <h5 class="card-title">{{car.brand}}</h5>
+            <h6 class="card-title">{{car.model}}</h6>
+            <p class="card-text">{{car.year}}</p>
+        </div>
+    </div>
+</div>
