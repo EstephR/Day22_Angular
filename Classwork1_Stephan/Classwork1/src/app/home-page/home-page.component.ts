@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'home-page',
@@ -63,11 +64,25 @@ cars: Array<{brand: string, model: string, year: number, img: string}> = [
   }
 ];
 
+carForm = new FormGroup({
+  brand: new FormControl("",Validators.required),
+  model: new FormControl("", Validators.required),
+  year: new FormControl("", Validators.required),
+  img: new FormControl("", Validators.required),
+})
+
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addCar() {
+    if (this.carForm.valid) {
+       var printObj = this.carForm.value;
+    this.cars.push(printObj);
+    }
   }
 
 }

@@ -1,5 +1,17 @@
 <h1 class="h1 text-center m-4">Our Cars</h1>
 
+<div class="user-area">
+    <h3 class="h3">User Area</h3>
+    <form class="" [formGroup]="carForm" (ngSubmit)="addCar()">
+        <input type="text" placeholder="Brand Name" formControlName="brand">
+        <input type="text" placeholder="Model Name" formControlName="model">
+        <input type="text" placeholder="Year" formControlName="year">
+        <input type="text" placeholder="image-url" formControlName="img">
+        <input type="submit" class="btn btn-success border-0" value="Submit">
+    </form>
+
+</div>
+
 <div class="row justify-content-center gap-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
     <div class="card border-0" style="width: 18rem;" *ngFor="let car of cars">
         <img src="{{car.img}}" class="card-img-top" height="200" style="object-fit:cover; object-position:center" alt="">
